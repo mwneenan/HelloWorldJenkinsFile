@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'amplify --version'
+                sh 'gradle --version'
             }
         }
     }
