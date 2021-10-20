@@ -2,7 +2,6 @@ pipeline {
   agent {
     docker {
       image 'mwneenan/morgantest:1.0'
-      args 'CDK_HOME=foo'
     }
 
   }
