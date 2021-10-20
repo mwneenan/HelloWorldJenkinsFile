@@ -1,21 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      agent {
-        docker {
-          image 'mwneenan/morgantest:1.0'
-          reuseNode true
-        }
-
-      }
-      steps {
-        sh 'pwd'
-        sh 'ls'
-        sh 'npm --version'
-        sh 'cdk --version'
-      }
+    agent {
+        docker { image 'mwneenan/morgantest:1.0' }
     }
-
-  }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'npm --version'
+                sh 'cdk --version'
+                sh 'amplify --version'
+            }
+        }
+    }
 }
