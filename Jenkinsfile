@@ -8,6 +8,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        sh 'pwd'
+        sh 'ls'
         sh 'npm --version'
         sh 'cdk --version'
         sh 'amplify --version'
