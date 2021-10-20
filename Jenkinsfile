@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'mwneenan/morgantest:1.0'
+      image 'mwneenan/morgantest:2.0'
     }
 
   }
